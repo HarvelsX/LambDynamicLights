@@ -1,5 +1,5 @@
 /*
- * Copyright © 2020-2022 LambdAurora <email@lambdaurora.dev>
+ * Copyright � 2023 LambdAurora <email@lambdaurora.dev>
  *
  * This file is part of LambDynamicLights.
  *
@@ -40,7 +40,7 @@ public abstract class LivingEntityMixin extends Entity implements DynamicLightSo
 			this.lambdynlights$luminance = 15;
 		} else {
 			int luminance = 0;
-			var eyePos = new BlockPos(this.getX(), this.getEyeY(), this.getZ());
+			var eyePos = getBlockPos();
 			boolean submergedInFluid = !this.world.getFluidState(eyePos).isEmpty();
 			for (var equipped : this.getItemsEquipped()) {
 				if (!equipped.isEmpty())

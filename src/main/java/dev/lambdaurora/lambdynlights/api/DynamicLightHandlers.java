@@ -1,5 +1,5 @@
 /*
- * Copyright © 2020-2022 LambdAurora <email@lambdaurora.dev>
+ * Copyright � 2023 LambdAurora <email@lambdaurora.dev>
  *
  * This file is part of LambDynamicLights.
  *
@@ -162,7 +162,7 @@ public final class DynamicLightHandlers {
 		if (!canLightUp(entity))
 			return 0;
 		if (handler.isWaterSensitive(entity)
-				&& !entity.getWorld().getFluidState(new BlockPos(entity.getX(), entity.getEyeY(), entity.getZ())).isEmpty())
+				&& !entity.getWorld().getFluidState(entity.getBlockPos()).isEmpty())
 			return 0;
 		return handler.getLuminance(entity);
 	}

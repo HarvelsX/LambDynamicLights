@@ -163,7 +163,7 @@ shadowJar {
 
 	relocate 'com.electronwill.nightconfig', 'dev.lambdaurora.lambdynlights.shadow.nightconfig'
 }
-prepareRemapJar.dependsOn(shadowJar)
+task('prepareRemapJar').dependsOn(shadowJar)
 
 modrinth {
 	projectId = project.modrinth_id
